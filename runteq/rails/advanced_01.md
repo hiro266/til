@@ -4,7 +4,7 @@
 - image_tagの引数にnilが入るとエラーを吐く  
 if(unless)でnil以外の時だけ画像を表示させてやれば良い
 
-## 解答例
+### 解答例
 ```ruby
 ruby:
   medium = local_assigns[:medium]
