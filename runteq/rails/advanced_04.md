@@ -63,3 +63,84 @@ N+1:SQLの実行回数+全てのレコードの取得
 
 includesメソッドで関連するモデルのデータを先に取得  
 includes(:取得したいモデル)
+
+### find find_by where
+
+find、find_byは検索結果のインスタンス(データが返ってくるため)カラムの取得も可能。  
+whereは検索結果の表示をしているだけなのでカラムの取得はできない。
+
+#### find
+
+- idを検索対象としてデータを取得&カラムの取得可能
+
+```
+[3] pry(main)> article = Article.find(1)
+  Article Load (0.4ms)  SELECT  `articles`.* FROM `articles` WHERE `articles`.`id` = 1 LIMIT 1
+=> #<Article:0x00007f9e5aa4b960
+ id: 1,
+ category_id: nil,
+ author_id: nil,
+ uuid: "547c8942-edad-4c2a-a962-27198fef75ed",
+ slug: "slag",
+ title: "初投稿",
+ description: "テスト投稿",
+ body: nil,
+ state: "draft",
+ published_at: Wed, 08 Apr 2020 17:40:00 JST +09:00,
+ created_at: Wed, 08 Apr 2020 17:38:57 JST +09:00,
+ updated_at: Wed, 08 Apr 2020 17:40:49 JST +09:00,
+ deleted_at: nil>
+[4] pry(main)> article.title
+=> "初投稿"
+```
+
+#### find_by
+
+- id以外を検索対象としてhitした**最初のデータ**のみ取得&カラム取得可能
+
+```
+[5] pry(main)> article = Article.find_by(state: 'draft')
+  Article Load (0.3ms)  SELECT  `articles`.* FROM `articles` WHERE `articles`.`state` = 0 LIMIT 1
+=> #<Article:0x00007f9e5a659f28
+ id: 1,
+ category_id: nil,
+ author_id: nil,
+ uuid: "547c8942-edad-4c2a-a962-27198fef75ed",
+ slug: "slag",
+ title: "初投稿",
+ description: "テスト投稿",
+ body: nil,
+ state: "draft",
+ published_at: Wed, 08 Apr 2020 17:40:00 JST +09:00,
+ created_at: Wed, 08 Apr 2020 17:38:57 JST +09:00,
+ updated_at: Wed, 08 Apr 2020 17:40:49 JST +09:00,
+ deleted_at: nil>
+[6] pry(main)> article.title
+=> "初投稿"
+```
+
+#### where
+
+- id以外を検索対象として検索した場合、該当する全てのデータが返ってくる&カラムの取得不可(返ってきたデータが1件だろうと)
+
+```
+[35] pry(main)> article = Article.where(state: 'published')
+  Article Load (0.6ms)  SELECT `articles`.* FROM `articles` WHERE `articles`.`state` = 1
+=> [#<Article:0x00007f9e5a8a8ab8
+  id: 2,
+  category_id: 1,
+  author_id: nil,
+  uuid: "12d9214c-bbb6-4743-92cc-e7e1711d43af",
+  slug: "image",
+  title: "エラー確認投稿",
+  description: "エラー確認",
+  body: "",
+  state: "published",
+  published_at: Sun, 12 Apr 2020 03:57:00 JST +09:00,
+  created_at: Wed, 08 Apr 2020 17:54:59 JST +09:00,
+  updated_at: Sun, 12 Apr 2020 03:57:18 JST +09:00,
+  deleted_at: nil>,
+[36] pry(main)> article.title
+NoMethodError: undefined method `title' for #<Article::ActiveRecord_Relation:0x00007f9e5a8abf60>
+from /Users/niwayamahiroki/runteq-curriculum/266_hiro266_runteq_learning_advanced/vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:125:in `method_missing'
+```
