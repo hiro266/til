@@ -144,3 +144,19 @@ whereは検索結果の表示をしているだけなのでカラムの取得は
 NoMethodError: undefined method `title' for #<Article::ActiveRecord_Relation:0x00007f9e5a8abf60>
 from /Users/niwayamahiroki/runteq-curriculum/266_hiro266_runteq_learning_advanced/vendor/bundle/ruby/2.6.0/gems/activerecord-5.2.3/lib/active_record/relation/delegation.rb:125:in `method_missing'
 ```
+
+### 三項演算子
+
+条件がtrueなら式1、falseなら式2
+
+```
+if 条件
+  式1
+else
+  式2
+end
+```
+
+```
+条件 ? 式1 : 式2
+```
