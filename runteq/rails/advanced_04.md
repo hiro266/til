@@ -160,3 +160,41 @@ end
 ```
 条件 ? 式1 : 式2
 ```
+
+### assign_attributesメソッド
+
+上書きしたい属性が複数あったとき、まとめて値を更新する。  
+送られてきたパラメータの値をまとめて上書きしたい時に便利。  
+`update`とは違いDBに値を変更せず、一時的に留める事が出来る。
+
+```
+def update
+    authorize(@article)
+
+    # 送られてきたパラメータの値をまとめて上書き(DBには保存しない)
+    @article.assign_attributes(article_params)
+    # stateを条件(article.rbに記載)に合わせて変更
+    @article.state = @article.publishable? ? :published : :before_published
+    if @article.save
+      flash[:notice] = '更新しました'
+      redirect_to edit_admin_article_path(@article.uuid)
+    else
+      render :edit
+    end
+end
+
+private
+
+  def article_params
+    params.require(:article).permit(
+      :title, :description, :slug, :state, :published_at, :eye_catch, :category_id, :author_id, tag_ids: []
+    )
+  end
+```
+
+上記のように、あるカラム(state)を変更したい場合は  
+一度パラメーターをモデルで保存、カラムを変更、saveにすれば良い。
+updateで一括してDBに保存してしまうと不便なこともある。
+
+
+
