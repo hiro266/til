@@ -202,5 +202,14 @@ updateは上書き、saveを一括で処理してしまうため、途中でカ�
 
 eachは全レコードを取得、1件ずつ処理なので、メモリが足りないとフリーズするので基本使わない方が良さそう
 
+### returnと後置if文で早期復帰
 
+`self.draft?`が`true`なら`return(以後の処理をしない)`
+
+```
+def test
+return if self.draft?
+
+puts 'hoge'
+```
 
