@@ -2,6 +2,8 @@
 
 ## 実装
 
+[単一テーブル継承について](https://qiita.com/hiro266/items/218713c076fb0075712f)
+
 ## RSpec
 
 ## 用語
