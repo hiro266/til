@@ -95,4 +95,6 @@ url → admin_articles_pathへ
 scope → q[:search_articles_form]  
 url → admin_articles_pathへ
 
+#### 補足
 
+- form_withのmodelオプションにActive Record以外のオブジェクト(Active Recordを継承していない)を渡すデザインパターンを**Form Object**と呼ぶ
