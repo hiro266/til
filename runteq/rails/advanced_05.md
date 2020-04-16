@@ -2,7 +2,7 @@
 
 ## 実装
 
-- ActiveModel関連
+- ActiveModel関連 [リファレンス](https://railsguides.jp/active_model_basics.html)
 
 > ActiveModelとはActiveRecordを継承しないクラスでもActiveRecordと同じような便利メソッドが使えるようになる優れものです。validatesメソッドなどがその一例
 
