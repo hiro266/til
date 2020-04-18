@@ -4,6 +4,12 @@
 
 ## RSpec
 
+### system_specで、同一バリューを持っているボタンを区別
+
+htmlの方でbuttonに name attributeを付与。  
+<button name="aaaa">Submit</button> みたいなイメージ。  
+そうすれば click_button 'aaaa' でクリックできる。  
+
 ## その他
 
 ### アイコン埋め込み方
