@@ -2,6 +2,40 @@
 
 ## 実装
 
+### セットアップ〜動作確認
+
+**ruby:application.html**
+```
+# .minファイルはソースコードを必要最小限の記述にしてファイルサイズを小さくしたもの
+
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
+
+<script src="https://unpkg.com/swiper/js/swiper.js"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+```
+
+**js:application.js**
+```
+var mySwiper = new Swiper('.swiper-container', {
+});
+```
+
+**任意のファイル**
+```
+.swiper-container
+  .swiper-wrapper
+    .swiper-slide
+      = image_tag 'imageのpath'
+    .swiper-slide
+      = image_tag 'imageのpath'
+    .swiper-slide
+      = image_tag 'imageのpath'
+    .swiper-slide
+      = image_tag 'imageのpath'
+```
+
+
 ## RSpec
 
 ## その他
