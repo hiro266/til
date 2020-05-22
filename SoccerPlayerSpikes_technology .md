@@ -4,6 +4,7 @@
 - Material Design for Bootstrap
 - TwitterAPIを使用したログイン、ツイート機能
 - ゲストログイン
+- STI
 
 ### RSpec
 - モック
