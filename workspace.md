@@ -7,7 +7,7 @@ GitHub Flowで開発を進めていただきます。
 
 （xxxには各課題で指定されるブランチ名を入力してください）
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/bfdc29ac6014bd5523c4140aadda2529.png)](https://startup-technology.gyazo.com/bfdc29ac6014bd5523c4140aadda2529)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/6f30337a6e6cf20e5b9d00c5999edf5b.png)](https://startup-technology.gyazo.com/6f30337a6e6cf20e5b9d00c5999edf5b)
 
 ### 2. 課題の要件に合わせて実装する
 
@@ -25,7 +25,7 @@ GitHub Flowで開発を進めていただきます。
 
 ### 4. RUNTEQの課題画面にてプルリクエストを作成
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/8eff75a5885a4d852708aa3bd6e8545a.png)](https://startup-technology.gyazo.com/8eff75a5885a4d852708aa3bd6e8545a)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/9955006167b54a4fc39764c4fe87ce45.png)](https://startup-technology.gyazo.com/9955006167b54a4fc39764c4fe87ce45)
 
 ### 5. 自動コードレビューを確認する
 自動コードレビューが通るまで2-3を繰り返しましょう。
@@ -34,7 +34,7 @@ GitHub Flowで開発を進めていただきます。
 
 クリックして課題完了となります。
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/77cc0dd9e54492f698b7d1a5da03b510.png)](https://startup-technology.gyazo.com/77cc0dd9e54492f698b7d1a5da03b510)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/dd83ca2f01e0f86a68b159ca1fd46075.png)](https://startup-technology.gyazo.com/dd83ca2f01e0f86a68b159ca1fd46075)
 
 ### 6. 自己採点
 課題の提出後に確認ポイントと解答例が出てきます。必ず学習するようにしましょう。
