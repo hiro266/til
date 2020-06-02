@@ -58,7 +58,7 @@ GitHub Flowで開発を進めていただきます。
 
 ローカルの作業ブランチをmasterに切り替えて、リモートリポジトリでマージされて更新されたmasterの情報を`git pull`コマンドで取り込みましょう。
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/5d5ece0cc9a992cfad3e3abeb2560953.png)](https://startup-technology.gyazo.com/5d5ece0cc9a992cfad3e3abeb2560953)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/ef4508f7f93e9e6c080a1cbb87de332c.png)](https://startup-technology.gyazo.com/ef4508f7f93e9e6c080a1cbb87de332c)
 
 `git log`コマンドで ローカルとリモートのコミット履歴が同じことが確認できたら、`git checkout -b` コマンドで新しい作業ブランチを作成します。
 
