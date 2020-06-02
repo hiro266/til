@@ -7,7 +7,7 @@ GitHub Flowで開発を進めていただきます。
 
 （xxxには各課題で指定されるブランチ名を入力してください）
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/6f30337a6e6cf20e5b9d00c5999edf5b.png)](https://startup-technology.gyazo.com/6f30337a6e6cf20e5b9d00c5999edf5b)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/63f3e605248a7fe49a22346ae35748be.png)](https://startup-technology.gyazo.com/63f3e605248a7fe49a22346ae35748be)
 
 ### 2. 課題の要件に合わせて実装する
 
