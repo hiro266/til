@@ -17,8 +17,7 @@ GitHub Flowで開発を進めていただきます。
 
 `git add [ファイル名]`
 
-`git status`
-(ステージングにファイルが存在しているか確認)
+`git status`(ステージングにファイルが存在しているか確認)
 
 `git commit -m 'Add: ジェネレータに関する設定を追加'`
 
@@ -28,23 +27,26 @@ GitHub Flowで開発を進めていただきます。
 
 `git push --set-upstream origin xxx(ブランチ名)`(指定されたコマンドを入力)
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/a6e21d594fb918ce69b91912a05cadcb.png)](https://startup-technology.gyazo.com/a6e21d594fb918ce69b91912a05cadcb)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/5c4ea7083ce69b7c1ebd255635472425.png)](https://startup-technology.gyazo.com/5c4ea7083ce69b7c1ebd255635472425)
 
 ### 4. RUNTEQの課題画面にてプルリクエストを作成
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/9955006167b54a4fc39764c4fe87ce45.png)](https://startup-technology.gyazo.com/9955006167b54a4fc39764c4fe87ce45)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/35619eb70ed0af25c9231b0a60d497a2.png)](https://startup-technology.gyazo.com/35619eb70ed0af25c9231b0a60d497a2)
 
 ### 5. 自動コードレビューを確認する
 自動コードレビューが通るまで2-3を繰り返しましょう。
 
-レビューに合格（LGTM）するとmergeボタンが出てきます。
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/165d3ca5cdcf32ba9a5bb7e329b5f279.png)](https://startup-technology.gyazo.com/165d3ca5cdcf32ba9a5bb7e329b5f279)
 
+レビューに合格（LGTM）するとmergeボタンが出てきます。
 このボタンをクリックすると課題完了となり、RUNTEQ側のリモートリポジトリでマージ作業が行われます。
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/dd83ca2f01e0f86a68b159ca1fd46075.png)](https://startup-technology.gyazo.com/dd83ca2f01e0f86a68b159ca1fd46075)
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/b3824350cc75e242421dfb3e40879987.png)](https://startup-technology.gyazo.com/b3824350cc75e242421dfb3e40879987)
 
 ### 6. 自己採点
 課題の提出後に確認ポイントと解答例が出てきます。
+
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/5cce54462d547165de546252dcc1a6f3.png)](https://startup-technology.gyazo.com/5cce54462d547165de546252dcc1a6f3)
 
 必ず確認してポイントの内容を学習するようにしましょう。
 
@@ -52,8 +54,14 @@ GitHub Flowで開発を進めていただきます。
 
 ### 7. 次の課題に進み1-6を繰り返す
 
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/5d5ece0cc9a992cfad3e3abeb2560953.png)](https://startup-technology.gyazo.com/5d5ece0cc9a992cfad3e3abeb2560953)
+
 ローカルの作業ブランチをmasterに切り替えて、リモートリポジトリでマージされて更新されたmasterの情報を`git pull`コマンドで取り込みましょう。
 
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/5d5ece0cc9a992cfad3e3abeb2560953.png)](https://startup-technology.gyazo.com/5d5ece0cc9a992cfad3e3abeb2560953)
+
 `git log`コマンドで ローカルとリモートのコミット履歴が同じことが確認できたら、`git checkout -b` コマンドで新しい作業ブランチを作成します。
+
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/72d5b29f1f334c6060e80da72361a7cd.png)](https://startup-technology.gyazo.com/72d5b29f1f334c6060e80da72361a7cd)
 
 ### 8. 全ての課題が完了したらカリキュラム終了
