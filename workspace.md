@@ -15,13 +15,20 @@ GitHub Flowで開発を進めていただきます。
 
 例）
 
-`git add .`
+`git add [ファイル名]`
 
-`git commit -m "[add]sorcery install"`
+`git status`
+(ステージングにファイルが存在しているか確認)
 
-`git push origin xxx(ブランチ名)`
+`git commit -m 'Add: ジェネレータに関する設定を追加`
 
-[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/295122a51b2e803bd79a3d490bd7a56c.png)](https://startup-technology.gyazo.com/295122a51b2e803bd79a3d490bd7a56c)
+`git status`(適切にコミットされて変更差分がないことを確認)
+
+`git push`(指定されたコマンドを確認)
+
+`git push --set-upstream origin xxx(ブランチ名)`(指定されたコマンドを入力)
+
+[![Image from Gyazo](https://t.gyazo.com/teams/startup-technology/a6e21d594fb918ce69b91912a05cadcb.png)](https://startup-technology.gyazo.com/a6e21d594fb918ce69b91912a05cadcb)
 
 ### 4. RUNTEQの課題画面にてプルリクエストを作成
 
