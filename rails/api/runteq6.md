@@ -58,3 +58,40 @@ end
 exception = nil にしておかないと引数なしでrender_404を呼び出せない。
 
 exception&.message ぼっち演算子にして、exceptionがnilだった時はメソッド呼び出さないようにする。
+
+# RUNTEQ解答
+
+`app/controllers/api/v1/authentications_controller.rb`
+
+```
+def create
+  @user = login(params[:email], params[:password])
+  raise ActiveRecord::RecordNotFound unless @user
+  json_string = UserSerializer.new(@user).serialized_json
+  render json: json_string
+end
+```
+
+きちんとerrorsにActiveRecord::RecordNotFoundが入っている
+
+{"message":"Record Not Found","errors":["ActiveRecord::RecordNotFound"]}
+
+raise で例外を発生させることができることを認識しておく。
+
+自分の回答
+
+```
+def create
+  authentication = login(params[:email], params[:password])
+  if authentication
+    json_string = UserSerializer.new(current_user).serialized_json
+    render json: json_string
+  else
+    render_404
+  end
+end
+```
+
+errorsにはnullなのでRUNTEQの解答に差し替える。
+
+{"message":"Record Not Found","errors":[null]}
