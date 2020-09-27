@@ -64,9 +64,6 @@ exceptionには例外の内容、exception.messageでエラーメッセージに
 
 render_404(exception)とすることで使用可能。
 
-
-
-
 `base_controller.rb`
 
 includeで切り出したmodule呼び出したら完了。
@@ -80,3 +77,11 @@ module Api
   end
 end
 ```
+
+## エラー
+
+`767: unexpected token at 'Internal Server Error'`
+
+`767: unexpected token at 'Record Not Found'`
+
+exception渡したら解消。
