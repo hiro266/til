@@ -14,7 +14,6 @@
 # extend ActiveSupport::Concern を有効にするための読み込み
 require 'active_support'
 # 名前空間のためApi::を挟む
-# パスと整合性取れるmodule名にしなければならない
 module Api::ExceptionHandler
   # モジュールを読み込んだ時にインスタンスメソッドもクラスメソッドも両方読み込める
   extend ActiveSupport::Concern
@@ -26,20 +25,47 @@ module Api::ExceptionHandler
   end
 
   private
-
-  def render_404
-    render_error('Record Not Found', 404)
+  
+  # 
+  def render_404(exception)
+    render_error(404, 'Record Not Found', exception.message)
   end
 
-  def render_500
-    render_error('Internal Server Error', 500)
+  def render_500(exception)
+    render_error(500, 'Internal Server Error', exception.message)
   end
+  
+  # *で配列(インデックス一つしかないのに配列にしてある理由は不明)にしているのはRUNTEQのRspec対策。なくても動作上は問題なし。
+  def render_error(code, message, *error_messages)
+    response = {
+        message: message,
+        errors: error_messages
+    }
 
-  def render_error(error_message, code)
-    render json: error_message, status: code
+    render json: response, status: code
   end
 end
+
 ```
+
+### pryで止めてパラメータ確認
+
+```
+[1] pry(#<Api::V1::ArticlesController>)> exception
+=> #<ActiveRecord::RecordNotFound: Couldn't find Article with 'id'=hoge>
+[2] pry(#<Api::V1::ArticlesController>)> exception.message
+=> "Couldn't find Article with 'id'=hoge"
+
+[1] pry(#<Api::V1::ArticlesController>)> response
+=> {:message=>"Record Not Found", :errors=>["Couldn't find Article with 'id'=hoge"]}
+```
+
+exceptionには例外の内容、exception.messageでエラーメッセージにアクセスできる。
+
+render_404(exception)とすることで使用可能。
+
+
+
 
 `base_controller.rb`
 
